@@ -1,0 +1,16 @@
+spring:
+  application.name: cloud-turbine
+
+server:
+  port: 8905
+
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: cloud-client,cloud-hystrix
+  clusterNameExpression: new String("default")
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8902/eureka/
